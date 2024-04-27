@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "nodemon -r dotenv/config --experimental-json-modules src/index.js",
-    "run": "dotenv/config --experimental-json-modules src/index.js"
+    "run": "src/index.js"
   },
   "author": "himanshu",
   "license": "ISC",
