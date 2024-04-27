@@ -3,6 +3,8 @@ import { APIResponse } from "../utility/APIResponse.js";
 import { seatscollection } from "../models/seats.model.js";
 import { schedules } from "../models/schedule.model.js";
 import { APIError } from "../utility/APIerror.js";
+import mongoose from "mongoose";
+const { Types } = mongoose;
 
 const seatsAdd = asyncHandler(async (req, res) => {
   const { upperbirth, lowerbirth } = req.body;
@@ -29,13 +31,6 @@ const updateseat = asyncHandler(async (req, res) => {
           _id: theId,
         },
       },
-      // {
-      //   $project: {
-      //     _id: 0,
-      //     "trip.seatingStructure.upperbirth": 1,
-      //     "trip.seatingStructure.lowerbirth": 1,
-      //   },
-      // },
     ]);
 
     if (!foundschedule) {
