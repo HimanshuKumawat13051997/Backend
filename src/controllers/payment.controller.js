@@ -23,8 +23,8 @@ const payment = asyncHandler(async (req, res) => {
     payment_method_types: ["card"],
     line_items: lineitems,
     mode: "payment",
-    success_url: `http://localhost:3000/booked`,
-    cancel_url: "http://localhost:3000/unbooked",
+    success_url: `https://busbooking-delta.vercel.app/booked`,
+    cancel_url: "https://busbooking-delta.vercel.app/unbooked",
   });
 
   return res.json({ id: session.id, url: session.url });
