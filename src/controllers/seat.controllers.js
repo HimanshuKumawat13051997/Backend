@@ -2,8 +2,7 @@ import { asyncHandler } from "../utility/asyncHandler.js";
 import { APIResponse } from "../utility/APIResponse.js";
 import { seatscollection } from "../models/seats.model.js";
 import { schedules } from "../models/schedule.model.js";
-import { APIError } from "../utility/APIError.js";
-import mongoose, { Types } from "mongoose";
+import { APIError } from "../utility/APIerror.js";
 
 const seatsAdd = asyncHandler(async (req, res) => {
   const { upperbirth, lowerbirth } = req.body;
