@@ -1,5 +1,5 @@
 import { User } from "../models/user.model.js";
-import { APIError } from "../utility/APIError.js";
+import { APIError } from "../utility/APIerror.js";
 import { asyncHandler } from "../utility/asyncHandler.js";
 import jwt from "jsonwebtoken";
 
